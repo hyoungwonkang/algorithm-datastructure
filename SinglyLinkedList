@@ -103,6 +103,15 @@ class SinglyLinkedList{
         return removed;
         
     }
+    print(){
+        var arr = [];
+        var current = this.head;
+        while(current){
+            arr.push(current.val);
+            current = current.next;
+        }
+        console.log(arr);
+    }
 }
 
 var list = new SinglyLinkedList()
@@ -111,4 +120,4 @@ list.push(100)
 list.push(201)
 list.push(250)
 list.push(350)
-
+list.push(999)
