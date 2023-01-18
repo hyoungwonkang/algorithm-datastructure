@@ -92,6 +92,17 @@ class SinglyLinkedList{
         this.length++;
         return true;
     }
+    remove(index){
+        if(index<0 || index>=list.length) return undefined;
+        if(index === list.length-1) return list.pop();
+        if(index === 0) return list.shift();
+        var previousNode = this.get(index-1);
+        var removed = previousNode.next;
+        this.length--;
+        
+        return removed;
+        
+    }
 }
 
 var list = new SinglyLinkedList()
